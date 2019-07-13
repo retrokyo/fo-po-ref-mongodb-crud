@@ -83,3 +83,7 @@ In another instance of your terminal launch the backend server. This app uses no
 ### `npm start`
 Launch another instance of terminal, you should have 3/4 open by now, navigate to the project root terminal and run:
 This will automatically open the app inside your browser.
+
+### Known Issue:
+
+After submitting on the edit page, you are redirected to the listing page. It does not update, so it may seem that the data you input did not go through, but it did. Just refresh the listing page, and the new data should show up.
