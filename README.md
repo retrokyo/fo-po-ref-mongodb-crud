@@ -66,3 +66,18 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### Full Setup Guide
+
+Start with `npm install` to download all dependencies
+
+Follow the 'Run MongoDB Community Edition' guide
+-This well set up and allow connection to local MongoDB
+
+In another instance of your terminal launch the backend server. This app uses nodemon so you would type:
+`nodemon server.js`
+
+Launch another instance of terminal, you should have 3/4 open by now, navigate to the project route terminal and run:
+`npm start`
+
+This will automatically open the app inside your browser.
