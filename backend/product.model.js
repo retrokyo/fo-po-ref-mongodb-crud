@@ -12,6 +12,9 @@ let Product = new Schema ({
     usage: [String],
     ingredients: [String],
     category: [String]
-});
+    },
+    {
+        collection: 'products'
+    });
 
 module.exports = mongoose.model('Product', Product);
