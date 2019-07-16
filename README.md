@@ -72,12 +72,18 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ### `npm install`
 Download all dependencies. This needs to be done in both the project root directory and backend folder
 
-Follow the [Run MongoDB Community Edition guide](https://docs.mongodb.com/v3.2/tutorial/install-mongodb-on-windows/#run-mongodb-community-edition)
-This well set up and allow connection to local MongoDB
+### MongoDB
+Follow the [Run MongoDB Community Edition guide](https://docs.mongodb.com/v3.2/administration/install-community/) for your OS
+Currently the app is written so that the address for the DB is 127.0.0.1:27107
+Further the app is written assuming you have a products DB, so make sure that you create one, and are using it in the MongoDB Service
 
 ### `nodemon server.js`
 In another instance of your terminal launch the backend server. This app uses nodemon so you would type:
 
 ### `npm start`
-Launch another instance of terminal, you should have 3/4 open by now, navigate to the project route terminal and run:
+Launch another instance of terminal, you should have 3/4 open by now, navigate to the project root terminal and run:
 This will automatically open the app inside your browser.
+
+### Known Issue:
+
+After submitting on the edit page, you are redirected to the listing page. It does not update, so it may seem that the data you input did not go through, but it did. Just refresh the listing page, and the new data should show up.
