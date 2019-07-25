@@ -29,7 +29,7 @@ class editProduct extends Component {
 } 
 
     componentDidMount () {
-        axios.get('http://localhost:4000/products/' + this.props.match.params.id)
+        axios.get('http://localhost:4001/products/' + this.props.match.params.id)
                 .then(res => {
                     this.setState({
                         product_name: res.data.product_name,
@@ -103,7 +103,7 @@ class editProduct extends Component {
             category: this.state.category
         };
 
-        axios.post('http://localhost:4000/products/update/'+this.props.match.params.id, updateProduct)
+        axios.post('http://localhost:4001/products/update/'+this.props.match.params.id, updateProduct)
                 .then(res => console.log(res.data));
 
         this.setState({ redirect: true });

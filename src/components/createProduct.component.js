@@ -89,7 +89,7 @@ class createProduct extends Component {
             category: this.state.category
         };
 
-        axios.post('http://localhost:4000/products/add', newProduct)
+        axios.post('http://localhost:4001/products/add', newProduct)
                 .then(res => console.log(res.data));
 
         this.setState=({

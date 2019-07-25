@@ -24,7 +24,7 @@ class productList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:4000/products/')
+        axios.get('http://localhost:4001/products/')
                 .then(res => {
                     this.setState({products: res.data });
                 })
