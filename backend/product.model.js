@@ -2,19 +2,40 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let Product = new Schema ({
-    product_name: String,
-    brand_name: String,
-    description: String,
+    product_name: {
+        type: String,
+        lowercase: true
+    },
+
+    brand_name: {
+        type: String,
+        lowercase: true
+    },
+
+    description: {
+        type: String,
+        lowercase: true
+    },
+
     country_code: {
         type: String,
-        lowercase: false,
+        lowercase: true,
     },
-    usage: [String],
-    ingredients: [String],
-    category: [String]
-    },
-    {
-        collection: 'products'
-    });
 
-module.exports = mongoose.model('Product', Product);
+    usage: [{
+        type: String,
+        lowercase: true
+    }],
+
+    ingredients: [{
+        type: String,
+        lowercase: true
+    }],
+
+    category: [{
+        type: String,
+        lowercase: true
+    }]
+});
+
+module.exports = mongoose.model('Product', Product, 'products');
